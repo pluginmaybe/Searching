@@ -16,6 +16,7 @@ public class LinkList<T> where T : IComparable
   public LinkList(T value)
   {
     _head = new() { Value = value };
+    Console.WriteLine($"New List : Initial Head value : {value}");
   }
 
   public bool IsEmpty()
@@ -30,6 +31,8 @@ public class LinkList<T> where T : IComparable
     }
     Node node = _head!;
     StringBuilder sb = new();
+    sb.Append("List: HEAD > ");
+    
     while (true)
     {
       sb.Append(node.Value.ToString() + " ");
@@ -39,10 +42,12 @@ public class LinkList<T> where T : IComparable
       }
       node = node.Next;
     }
+    sb.Append("< TAIL");
     return sb.ToString();
   }
   public void AddToTail(T value)
   {
+    Console.WriteLine($"ADD > {value} < TO TAIL");
     Node newNode = new() { Value = value };
     if (IsEmpty()) 
     {
@@ -59,6 +64,7 @@ public class LinkList<T> where T : IComparable
   }
   public void AddToHead(T value)
   {
+    Console.WriteLine($"ADD > {value} < TO HEAD");
     Node newNode = new() { Value = value };
     if (IsEmpty()) 
     {
@@ -79,6 +85,7 @@ public class LinkList<T> where T : IComparable
   }
   public bool Contains(T target)
   {
+    Console.WriteLine($"SEARCHING LIST FOR > {target} <");
     if (IsEmpty())
     {
       return false;
@@ -104,6 +111,7 @@ public class LinkList<T> where T : IComparable
   }
   public T RemoveHead()
   {
+    Console.WriteLine("REMOVE HEAD");
     if (IsEmpty())
     {
       throw new Exception("Empty List");
@@ -114,6 +122,7 @@ public class LinkList<T> where T : IComparable
   }
   public T RemoveTail()
   {
+    Console.WriteLine("REMOVE TAIL");
     if (IsEmpty()) 
     { 
       throw new Exception("Empty List"); 
@@ -138,6 +147,7 @@ public class LinkList<T> where T : IComparable
   }
   public bool RemoveValue(T target)
   {
+    Console.WriteLine($"REMOVE BY VALUE > {target} <");
     if (IsEmpty())
     {
       return false;
