@@ -15,21 +15,33 @@ class Program
         SearchTester(LinearSearch.LinSearch, ints, 12);
         SearchTester(LinearSearch.LinSearch, ints, 14);
 
-        LinkList<int> lst = new(2);
-        lst.AddToTail(3);
-        lst.AddToTail(4);
-        lst.AddToTail(5);
-        lst.AddToTail(6);
-        lst.AddToTail(7);
-        lst.AddToTail(8);
-        lst.AddToTail(9);
         DisplayHeader("Linked List");
+        LinkedListTester();
+    }
+    
+    static void LinkedListTester()
+    {
+        LinkList<int> lst = new(1);
+        lst.AddToTail(5);
+        lst.AddToTail(7);
+        lst.AddToHead(8);
+        lst.AddToTail(9);
+       
         Console.WriteLine(lst);
-        Console.WriteLine($"List contains 0 : {lst.Contains(0)}");
-        Console.WriteLine($"List contains 7 : {lst.Contains(7)}");
+        Console.WriteLine(lst.Contains(0));
+        Console.WriteLine(lst.Contains(7));
         lst.RemoveValue(5);
         Console.WriteLine(lst);
-
+        lst.RemoveTail();
+        Console.WriteLine(lst);
+        lst.RemoveHead();
+        Console.WriteLine(lst);
+        lst.RemoveHead();
+        Console.WriteLine(lst);
+        lst.RemoveHead();
+        Console.WriteLine(lst);
+        lst.AddToTail(99);
+        Console.WriteLine(lst);
     }
     static void SearchTester<T>(PerformSearch<T> f,List<T> values, T target) where T : IComparable
     {

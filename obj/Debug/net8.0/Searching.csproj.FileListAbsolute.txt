@@ -12,3 +12,4 @@ C:\Coding\C#\Searching\obj\Debug\net8.0\refint\Searching.dll
 C:\Coding\C#\Searching\obj\Debug\net8.0\Searching.pdb
 C:\Coding\C#\Searching\obj\Debug\net8.0\Searching.genruntimeconfig.cache
 C:\Coding\C#\Searching\obj\Debug\net8.0\ref\Searching.dll
+C:\Coding\C#\Searching\obj\Debug\net8.0\Searching.sourcelink.json
