@@ -1,6 +1,6 @@
 # Some simple Search Algorithms
 
-### Binary and Linear
+### BinarySearch and LinearSearch
 Basic C# implementations, using generics, of the well-known search algorithms.
 
 ### LinkList
