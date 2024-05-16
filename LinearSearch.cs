@@ -7,7 +7,7 @@ public static class LinearSearch
     int idx = 0;
     while (idx < lst.Count)
     {
-      if (lst[idx].Equals(target))
+      if (lst[idx].CompareTo(target) == 0)
       {
         return true;
       }
